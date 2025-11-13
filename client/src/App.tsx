@@ -1,17 +1,29 @@
 import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
+
+const defaultReviews = [
+  { id: 1, name: 'Ahmet Y.', rating: 5, comment: 'Çok faydalı bir uygulama! Çocuklarla birlikte kullanıyoruz.', date: '10.11.2025' },
+  { id: 2, name: 'Zeynep K.', rating: 4, comment: 'Testler çok eğlenceli, matematiği sevmeye başladım!', date: '08.11.2025' },
+  { id: 3, name: 'Mehmet A.', rating: 5, comment: 'Konu anlatımları çok açık ve anlaşılır. Teşekkürler!', date: '05.11.2025' }
+];
 
 function App() {
   const navigate = useNavigate()
   const [rating, setRating] = useState(0)
   const [hoverRating, setHoverRating] = useState(0)
   const [comment, setComment] = useState('')
-  const [reviews, setReviews] = useState([
-    { id: 1, name: 'Ahmet Y.', rating: 5, comment: 'Çok faydalı bir uygulama! Çocuklarla birlikte kullanıyoruz.', date: '10.11.2025' },
-    { id: 2, name: 'Zeynep K.', rating: 4, comment: 'Testler çok eğlenceli, matematiği sevmeye başladım!', date: '08.11.2025' },
-    { id: 3, name: 'Mehmet A.', rating: 5, comment: 'Konu anlatımları çok açık ve anlaşılır. Teşekkürler!', date: '05.11.2025' }
-  ])
+  
+  // localStorage'dan yorumları yükle
+  const [reviews, setReviews] = useState(() => {
+    const saved = localStorage.getItem('reviews')
+    return saved ? JSON.parse(saved) : defaultReviews
+  })
+
+  // Yorumlar değiştiğinde localStorage'a kaydet
+  useEffect(() => {
+    localStorage.setItem('reviews', JSON.stringify(reviews))
+  }, [reviews])
 
   const handleSubmitReview = (e: React.FormEvent) => {
     e.preventDefault()
