@@ -36,17 +36,17 @@ function UnitPage() {
             <div className="topic-card">
               <h4>🎯 Konu Anlatımı</h4>
               <p>Ünitenin temel kavramlarını öğren</p>
-              <button className="topic-button">Başla</button>
+              <button className="topic-button" onClick={() => navigate(`/unit/${unitId}/lesson`)}>Başla</button>
             </div>
             <div className="topic-card">
               <h4>📝 Alıştırmalar</h4>
               <p>Pratik yaparak pekiştir</p>
-              <button className="topic-button">Başla</button>
+              <button className="topic-button" onClick={() => navigate(`/unit/${unitId}/practice`)}>Başla</button>
             </div>
             <div className="topic-card">
               <h4>🧪 Test</h4>
               <p>Bilgini ölç, puan kazan</p>
-              <button className="topic-button">Başla</button>
+              <button className="topic-button" onClick={() => navigate(`/unit/${unitId}/test`)}>Başla</button>
             </div>
           </div>
         </section>
