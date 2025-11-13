@@ -7,29 +7,34 @@ const testQuestions: Record<string, any> = {
     title: 'Tam Sayılarla İşlemler',
     questions: [
       { 
-        q: '(-8) + (+12) işleminin sonucu kaçtır?',
-        options: ['+4', '-4', '+20', '-20'],
-        correct: 0
+        q: '(+5) + (+3) işleminin sonucu kaçtır?',
+        options: ['+8', '+2', '-2', '+15'],
+        correct: 0,
+        difficulty: 'Kolay'
       },
       { 
-        q: '(+15) - (-5) işleminin sonucu kaçtır?',
-        options: ['+10', '+20', '-10', '-20'],
-        correct: 1
+        q: '(+10) - (+4) işleminin sonucu kaçtır?',
+        options: ['+6', '+14', '-6', '+4'],
+        correct: 0,
+        difficulty: 'Kolay'
+      },
+      { 
+        q: '(-8) + (+12) işleminin sonucu kaçtır?',
+        options: ['+4', '-4', '+20', '-20'],
+        correct: 0,
+        difficulty: 'Orta'
       },
       { 
         q: '(-6) × (-4) işleminin sonucu kaçtır?',
         options: ['-24', '+24', '-10', '+10'],
-        correct: 1
-      },
-      { 
-        q: '(+20) ÷ (-4) işleminin sonucu kaçtır?',
-        options: ['+5', '-5', '+16', '-16'],
-        correct: 1
+        correct: 1,
+        difficulty: 'Orta'
       },
       { 
         q: 'Hangi işlemin sonucu negatif sayıdır?',
         options: ['(-5) × (-3)', '(+8) + (+2)', '(-10) ÷ (+2)', '(+7) - (+3)'],
-        correct: 2
+        correct: 2,
+        difficulty: 'Zor'
       }
     ]
   },
@@ -37,29 +42,34 @@ const testQuestions: Record<string, any> = {
     title: 'Rasyonel Sayılar',
     questions: [
       { 
-        q: '3/4 + 1/4 işleminin sonucu nedir?',
-        options: ['4/4 = 1', '4/8', '2/4', '3/8'],
-        correct: 0
+        q: '1/2 + 1/2 işleminin sonucu nedir?',
+        options: ['1', '1/4', '2', '1/2'],
+        correct: 0,
+        difficulty: 'Kolay'
       },
       { 
-        q: '1/2 × 2/3 işleminin sonucu nedir?',
-        options: ['3/4', '1/3', '2/6', '1/6'],
-        correct: 1
+        q: '3/4 + 1/4 işleminin sonucu nedir?',
+        options: ['4/4 = 1', '4/8', '2/4', '3/8'],
+        correct: 0,
+        difficulty: 'Kolay'
       },
       { 
         q: '0.5 + 0.75 işleminin sonucu nedir?',
         options: ['1.25', '1.0', '0.25', '1.5'],
-        correct: 0
+        correct: 0,
+        difficulty: 'Orta'
+      },
+      { 
+        q: '1/2 × 2/3 işleminin sonucu nedir?',
+        options: ['3/4', '1/3', '2/6', '1/6'],
+        correct: 1,
+        difficulty: 'Orta'
       },
       { 
         q: 'Aşağıdakilerden hangisi rasyonel sayı değildir?',
         options: ['2/3', '√2', '0.5', '-3'],
-        correct: 1
-      },
-      { 
-        q: '2/5 kesrinin ondalık gösterimi nedir?',
-        options: ['0.4', '0.5', '0.2', '0.25'],
-        correct: 0
+        correct: 1,
+        difficulty: 'Zor'
       }
     ]
   },
@@ -67,29 +77,34 @@ const testQuestions: Record<string, any> = {
     title: 'Cebirsel İfadeler',
     questions: [
       { 
-        q: '3x + 5 = 20 denkleminde x kaçtır?',
-        options: ['5', '6', '4', '7'],
-        correct: 0
+        q: 'x + 5 = 12 denkleminde x kaçtır?',
+        options: ['7', '17', '5', '12'],
+        correct: 0,
+        difficulty: 'Kolay'
       },
       { 
-        q: '2(x + 3) = 14 denkleminde x kaçtır?',
-        options: ['5', '4', '6', '7'],
-        correct: 1
+        q: '2x = 10 denkleminde x kaçtır?',
+        options: ['5', '20', '8', '12'],
+        correct: 0,
+        difficulty: 'Kolay'
       },
       { 
         q: 'x² = 16 ise x kaçtır?',
         options: ['4', '8', '2', '16'],
-        correct: 0
+        correct: 0,
+        difficulty: 'Orta'
       },
       { 
-        q: '5x - 7 = 18 denkleminde x kaçtır?',
-        options: ['3', '4', '5', '6'],
-        correct: 2
+        q: '3x + 5 = 20 denkleminde x kaçtır?',
+        options: ['5', '6', '4', '7'],
+        correct: 0,
+        difficulty: 'Orta'
       },
       { 
-        q: 'x/2 = 6 denkleminde x kaçtır?',
-        options: ['3', '12', '6', '24'],
-        correct: 1
+        q: '2(x + 3) = 14 denkleminde x kaçtır?',
+        options: ['5', '4', '6', '7'],
+        correct: 1,
+        difficulty: 'Zor'
       }
     ]
   },
@@ -97,29 +112,34 @@ const testQuestions: Record<string, any> = {
     title: 'Oran ve Orantı',
     questions: [
       { 
-        q: '80 sayısının %25 i kaçtır?',
-        options: ['20', '25', '30', '15'],
-        correct: 0
-      },
-      { 
-        q: '50 nin %40 ı kaçtır?',
-        options: ['10', '15', '20', '25'],
-        correct: 2
-      },
-      { 
-        q: '4:6 oranı hangi orana eşittir?',
-        options: ['1:2', '2:3', '3:4', '1:3'],
-        correct: 1
+        q: '100 ün %50 si kaçtır?',
+        options: ['50', '25', '75', '100'],
+        correct: 0,
+        difficulty: 'Kolay'
       },
       { 
         q: '300 ün %10 u kaçtır?',
         options: ['30', '20', '40', '50'],
-        correct: 0
+        correct: 0,
+        difficulty: 'Kolay'
+      },
+      { 
+        q: '4:6 oranı hangi orana eşittir?',
+        options: ['1:2', '2:3', '3:4', '1:3'],
+        correct: 1,
+        difficulty: 'Orta'
+      },
+      { 
+        q: '80 sayısının %25 i kaçtır?',
+        options: ['20', '25', '30', '15'],
+        correct: 0,
+        difficulty: 'Orta'
       },
       { 
         q: 'Bir sayının %50 si 40 ise bu sayı kaçtır?',
         options: ['60', '70', '80', '90'],
-        correct: 2
+        correct: 2,
+        difficulty: 'Zor'
       }
     ]
   },
@@ -127,29 +147,34 @@ const testQuestions: Record<string, any> = {
     title: 'Geometri',
     questions: [
       { 
-        q: 'Bir üçgenin iç açıları toplamı kaç derecedir?',
-        options: ['180°', '360°', '90°', '270°'],
-        correct: 0
-      },
-      { 
         q: 'Dik açı kaç derecedir?',
         options: ['45°', '90°', '180°', '60°'],
-        correct: 1
-      },
-      { 
-        q: 'Bir dörtgenin iç açıları toplamı kaç derecedir?',
-        options: ['180°', '270°', '360°', '540°'],
-        correct: 2
+        correct: 1,
+        difficulty: 'Kolay'
       },
       { 
         q: 'Eşkenar üçgenin bir açısı kaç derecedir?',
         options: ['45°', '60°', '90°', '120°'],
-        correct: 1
+        correct: 1,
+        difficulty: 'Kolay'
+      },
+      { 
+        q: 'Bir üçgenin iç açıları toplamı kaç derecedir?',
+        options: ['180°', '360°', '90°', '270°'],
+        correct: 0,
+        difficulty: 'Orta'
+      },
+      { 
+        q: 'Bir dörtgenin iç açıları toplamı kaç derecedir?',
+        options: ['180°', '270°', '360°', '540°'],
+        correct: 2,
+        difficulty: 'Orta'
       },
       { 
         q: 'Dikdörtgenin köşegenleri birbirini nasıl keser?',
         options: ['Ortalar', 'Üçe böler', 'Eşit değildir', 'Dik keser'],
-        correct: 0
+        correct: 0,
+        difficulty: 'Zor'
       }
     ]
   },
@@ -157,29 +182,34 @@ const testQuestions: Record<string, any> = {
     title: 'Veri Analizi',
     questions: [
       { 
-        q: '5, 10, 15, 20 sayılarının aritmetik ortalaması kaçtır?',
-        options: ['10', '12.5', '15', '50'],
-        correct: 1
-      },
-      { 
         q: '8, 8, 8, 8 sayılarının ortalaması kaçtır?',
         options: ['4', '8', '16', '32'],
-        correct: 1
+        correct: 1,
+        difficulty: 'Kolay'
       },
       { 
-        q: 'Bir veri setinde en çok tekrar eden değere ne denir?',
-        options: ['Ortalama', 'Medyan', 'Mod', 'Aralık'],
-        correct: 2
+        q: '10, 20, 30 sayılarının ortalaması kaçtır?',
+        options: ['20', '15', '25', '30'],
+        correct: 0,
+        difficulty: 'Kolay'
       },
       { 
         q: '1, 3, 5, 7, 9 sayılarının ortanca değeri (medyan) kaçtır?',
         options: ['3', '5', '7', '6'],
-        correct: 1
+        correct: 1,
+        difficulty: 'Orta'
       },
       { 
-        q: '10, 20, 30, 40 sayılarının toplamı kaçtır?',
-        options: ['80', '90', '100', '110'],
-        correct: 2
+        q: '5, 10, 15, 20 sayılarının aritmetik ortalaması kaçtır?',
+        options: ['10', '12.5', '15', '50'],
+        correct: 1,
+        difficulty: 'Orta'
+      },
+      { 
+        q: 'Bir veri setinde en çok tekrar eden değere ne denir?',
+        options: ['Ortalama', 'Medyan', 'Mod', 'Aralık'],
+        correct: 2,
+        difficulty: 'Zor'
       }
     ]
   }
