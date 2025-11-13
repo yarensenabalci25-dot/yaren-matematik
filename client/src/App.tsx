@@ -63,6 +63,11 @@ function App() {
               <p>Çoktan seçmeli, doğru/yanlış ve boşluk doldurma formatlarında testler</p>
             </div>
             <div className="feature-card">
+              <div className="feature-icon">📈</div>
+              <h3>Kolaydan Zora</h3>
+              <p>Alıştırmalar ve testler kolaydan başlayıp kademeli olarak zorlaşır</p>
+            </div>
+            <div className="feature-card">
               <div className="feature-icon">🏆</div>
               <h3>Puanlama Sistemi</h3>
               <p>Her doğru cevap için puan kazan ve lider tablosunda yüksel</p>
